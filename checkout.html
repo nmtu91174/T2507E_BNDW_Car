@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lamborghini Checkout</title>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../css/checkout.css">
+
+</head>
+<body>
+
+<header>
+    <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/logos/2024/03_26/logo_header_01.svg" alt="Logo Lamborghini">
+    <h1>Lamborghini Checkout</h1>
+</header>
+
+<nav>
+    <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Orders</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</nav>
+
+<main>
+    <!-- LEFT COLUMN: Billing & Payment -->
+    <section>
+        <div class="card">
+            <h2 class="section-title">Billing & Payment</h2>
+            <form>
+                <div class="form-group">
+                    <input type="text" id="name" required placeholder=" ">
+                    <label for="name">Full Name</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="email" id="email" required placeholder=" ">
+                    <label for="email">Email</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="address" required placeholder=" ">
+                    <label for="address">Address</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="city" required placeholder=" ">
+                    <label for="city">City</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="state" required placeholder=" ">
+                    <label for="state">State/Province</label>
+                </div>
+
+                <div class="form-group">
+                    <input type="text" id="zip" required placeholder=" ">
+                    <label for="zip">Zip Code</label>
+                </div>
+
+                <div class="form-group">
+                    <select id="payment" required>
+                        <option value="" disabled selected hidden></option>
+                        <option>Cash on Delivery (COD)</option>
+                        <option>Credit Card</option>
+                        <option>PayPal</option>
+                    </select>
+                    <label for="payment">Payment Method</label>
+                </div>
+                <div class="actions" style="margin-top:20px;">
+                    <button type="submit" class="btn-place-order">Place Order</button>
+                    <button type="button" class="btn-cancel">Cancel Order</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- RIGHT COLUMN: Order Summary -->
+    <aside>
+        <div class="card">
+            <h2 class="section-title">Order Summary</h2>
+            <div class="products-container">
+                <div class="product-card">
+                    <img src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/homepage/hero/aventador-svj-roadster/2023/aventador-svj-roadster-hero.jpg" alt="Jacket">
+                    <div class="product-info">
+                        <h4>Lamborghini Jacket</h4>
+                        <span>Qty: 1 | $1,200</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.pixabay.com/photo/2016/03/09/09/25/car-1245671_1280.jpg" alt="Model Car">
+                    <div class="product-info">
+                        <h4>Lamborghini Model Car</h4>
+                        <span>Qty: 1 | $350</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <img src="https://cdn.pixabay.com/photo/2013/07/13/10/07/keychain-157174_1280.png" alt="Keychain">
+                    <div class="product-info">
+                        <h4>Lamborghini Keychain</h4>
+                        <span>Qty: 1 | $80</span>
+                    </div>
+                </div>
+            </div>
+            <hr style="border-color:#ddd; margin:15px 0;">
+            <table>
+                <tr><td>Subtotal:</td><td>$1,630</td></tr>
+                <tr><td>Shipping:</td><td>$70</td></tr>
+                <tr><td>Total:</td><td>$1,700</td></tr>
+            </table>
+        </div>
+    </aside>
+</main>
+
+<footer>
+  <div class="footer-container">
+    <div class="footer-section about">
+      <h3>Lamborghini Orders</h3>
+      <p>© 2025 Lamborghini Orders. All rights reserved. Luxury shopping experience ensured for every order.</p>
+    </div>
+    <div class="footer-section contact">
+      <h4>Contact</h4>
+      <p>123 Luxury Ave, Los Angeles, CA, USA</p>
+      <p>Phone: +1 234 567 890</p>
+      <p>Email: support@lamborghiniorders.com</p>
+    </div>
+    <div class="footer-section links">
+      <h4>Quick Links</h4>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Orders</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Support</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>Thank you for trusting Lamborghini Orders. We strive for a luxurious and seamless shopping experience.</p>
+  </div>
+</footer>
+
+</body>
+</html>

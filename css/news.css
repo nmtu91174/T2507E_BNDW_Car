@@ -1,0 +1,310 @@
+@font-face {
+    font-family: myFont;
+    src: url('../src/Lambotype-Variable.woff');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: myFont, sans-serif;
+    /* font-weight: 400; */
+    /* font-size: 20px; */
+    color: #111;
+    background: #ffffff;
+    min-height: 100vh;
+}
+
+/* Header và Nav */
+.header {
+    width: 100%;
+}
+
+.nav {
+    width: 100%;
+    height: 120px;
+    background-color: #000;
+    display: flex;
+    justify-content: center; /* căn giữa container */
+    align-items: center;     /* căn giữa theo chiều dọc */
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.5);
+}
+
+.container {
+    display: flex;
+    align-items: center;  /* căn giữa theo chiều dọc */
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 50px;
+    box-sizing: border-box;
+}
+
+/* Logo */
+.logo-header img {
+    height: 80px;   /* resize logo */
+    display: block;
+}
+
+/* Menu button */
+.btn-header {
+    display: flex;
+    align-items: center;
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    gap: 8px;
+}
+
+.hamburger {
+    width: 25px;
+    height: 2px;
+    background: #fff;
+    position: relative;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: "";
+    width: 25px;
+    height: 2px;
+    background: #fff;
+    position: absolute;
+    left: 0;
+}
+
+.hamburger::before {
+    top: -8px;
+}
+
+.hamburger::after {
+    top: 8px;
+}
+.menu-header {
+    text-transform: uppercase;
+    font-size: 20px;
+    /* font-weight: 500; */
+}
+
+/* Main content */
+main {
+    margin: 0 auto;
+    padding-top: 120px; /* > chiều cao header (120px) để tạo khoảng trống */
+    max-width: 1400px;
+}
+/* Video container full-width */
+.video-container {
+  position: relative;
+  width: 100vw;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 500px;
+  overflow: hidden;
+}
+
+/* Video: scale và căn giữa, phủ kín */
+.video-container video {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+  display: block;
+  z-index: 1;
+}
+
+/* overlay phủ toàn bộ video */
+.video-overlay {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  align-items: flex-start;   /* căn trên */
+  justify-content: flex-start; /* căn trái */
+  /* pointer-events: none; */
+}
+
+/* wrapper để giới hạn max-width giống nav */
+.video-content {
+  color: #fff;
+  display: flex;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 20px 50px;  /* bằng container nav */
+  box-sizing: border-box;
+}
+
+/* h1 */
+.hero-title {
+  position: relative;
+  z-index: 2;
+  font-family: "myFont", sans-serif;
+  /* font-weight: 200; */
+  text-transform: uppercase;
+  color: #fff;
+  text-decoration: none;
+  padding: 0 5px;
+  /* margin-left: 10px;  */
+  /* font-size: clamp(24px, 4vw, 42px); */
+  /* font-weight: 600; */
+  text-shadow: 0 4px 10px rgba(0,0,0,0.5);
+}
+
+.video-content p{
+  padding: 0 5px;
+}
+
+/* News section */
+section {
+    margin-top: 50px;
+    background: #fff;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;  
+}
+/* Container tổng */
+.container-first-news {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
+    box-sizing: border-box;
+}
+
+/* Tiêu đề phụ */
+.css-zytba9 .news-section-title__secondary {
+    font-size: 2rem;
+    font-style: normal;
+    font-variation-settings: "wght" 700;
+    line-height: 2.35rem;
+    font-weight: unset;
+    text-box: trim-both cap alphabetic;
+    text-transform: uppercase;
+    color: black;
+    margin-bottom: 1rem;
+}
+/* Tiêu đề chính */
+.css-zytba9 .news-section-title__primary {
+    font-size: 7.5rem;
+    font-style: normal;
+    line-height: 6.875rem;
+    text-transform: uppercase;
+    font-variation-settings: "wdth"0,"wght" 700;
+    font-weight: unset;
+    text-box: trim-both cap alphabetic;
+    color: black;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+/* Card tin chính */
+.card-news {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+/* Ảnh chính */
+.card-news__image-wrapper {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 0; /* Lamborghini để ảnh vuông góc */
+    position: relative;
+}
+
+.card-news__image img {
+    width: 100%;
+    height: auto;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.card-news__image img:hover {
+    transform: scale(1.05);
+}
+
+/* Tag */
+.tags {
+    margin-top: 1rem;
+}
+
+.lam-tag {
+    display: inline-block;
+    background: #eee;
+    color: #000;
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding: 4px 8px;
+    border-radius: 3px;
+    text-decoration: none;
+}
+
+.lam-tag:hover {
+    background: #000;
+    color: #fff;
+}
+
+/* Ngày đăng */
+.date.small time {
+    display: block;
+    margin: 0.75rem 0;
+    font-size: 0.8rem;
+    color: #555;
+    text-transform: uppercase;
+}
+
+/* Tiêu đề bài viết */
+.card-news__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0 0 1rem 0;
+}
+
+.card-news__title a {
+    color: #000;
+    text-decoration: none;
+}
+
+.card-news__title a:hover {
+    text-decoration: underline;
+}
+
+/* Consumption & emissions */
+.consumption-emissions-section {
+    font-size: 0.9rem;
+    color: #333;
+    line-height: 1.5;
+    margin-top: 1rem;
+}
+.consumption-emissions-section h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px;
+    }
+
+    .input-search {
+        display: none;
+    }
+    main {
+        padding-top: 100px; /* bù chiều cao header trên mobile */
+    }
+}

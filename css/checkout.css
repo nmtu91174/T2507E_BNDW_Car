@@ -1,0 +1,155 @@
+* { margin:0; padding:0; box-sizing:border-box; font-family: 'Poppins', sans-serif; }
+body { background:#fff; color:#111; display:flex; flex-direction:column; min-height:100vh; }
+
+/* HEADER */
+header { background:#000; color:#fff; text-align:center; padding:25px 20px; }
+header img { height:80px; margin-bottom:12px; }
+header h1 { font-size:2rem; font-weight:700; letter-spacing:3px; }
+
+/* NAV */
+nav { background:#111; border-bottom:1px solid #222; }
+nav ul { list-style:none; display:flex; justify-content:center; gap:50px; padding:18px 0; }
+nav ul li a { text-decoration:none; color:#fff; font-weight:500; transition: color 0.3s; }
+nav ul li a:hover { color:#aaa; }
+
+/* MAIN */
+main { flex:1; padding:50px 80px; display:grid; grid-template-columns:2fr 1fr; gap:50px; }
+
+/* CARD */
+.card { background:#f9f9f9; padding:30px; border-radius:12px; border:1px solid #ddd; box-shadow:0 8px 20px rgba(0,0,0,0.05); transition: transform 0.4s ease; }
+.card:hover { transform: translateY(-4px); box-shadow:0 12px 25px rgba(0,0,0,0.1); }
+
+.section-title { font-size:1.2rem; font-weight:700; margin-bottom:20px; border-bottom:2px solid #111; padding-bottom:8px; text-transform:uppercase; }
+
+/* FORM GROUP & INPUT */
+.form-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+.form-group input, .form-group select {
+  width: 100%;
+  padding: 18px 15px;
+  font-size: 0.95rem;
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  background: #fff;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 2px 4px rgba(0,0,0,0.05);
+}
+.form-group input:focus, .form-group select:focus {
+  border-color: #111;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15), inset 0 2px 6px rgba(0,0,0,0.05);
+  outline: none;
+}
+.form-group label {
+  position: absolute;
+  left: 18px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #aaa;
+  font-weight: 500;
+  pointer-events: none;
+  background: #fff;
+  padding: 0 5px;
+  transition: all 0.3s ease;
+}
+.form-group input:focus + label,
+.form-group input:not(:placeholder-shown) + label,
+.form-group select:focus + label,
+.form-group select[value]:not([value=""]) + label {
+  top: -10px;
+  font-size: 0.75rem;
+  color: #111;
+}
+.form-group select {
+  -webkit-appearance: none; /* loại bỏ style mặc định */
+  -moz-appearance: none;
+  appearance: none;
+  padding: 18px 35px 18px 15px; /* thêm padding cho mũi tên */
+  border: 2px solid #ccc;
+  border-radius: 12px;
+  font-size: 0.95rem;
+  background: #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12'%3E%3Cpath d='M0 0l6 6 6-6z' fill='%23999'/%3E%3C/svg%3E") no-repeat right 12px center;
+  background-size: 12px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.form-group select:focus {
+  border-color: #111;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15), inset 0 2px 6px rgba(0,0,0,0.05);
+  outline: none;
+}
+
+/* BUTTONS */
+/* PLACE ORDER BUTTON */
+.btn-place-order {
+  position: relative;
+  padding: 12px 25px;
+  border: 2px solid #111; 
+  background: #fff;
+  color: #111;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 0;
+  transition: color 0.4s ease;
+  margin-right: 10px;
+}
+.btn-place-order::before {
+  content:"";
+  position:absolute;
+  top:0; left:-100%;
+  width:100%; height:100%;
+  background: #111;
+  z-index:-1;
+  transition: left 0.15s ease;
+}
+.btn-place-order:hover::before { left:0; }
+.btn-place-order:hover { color:#fff; }
+.btn-place-order:not(:hover)::before { left:-100%; }
+
+/* CANCEL ORDER BUTTON */
+.btn-cancel {
+  position: relative;
+  padding: 12px 25px;
+  border: 2px solid #900; 
+  background: #fff;
+  color: #900;
+  font-weight: 600;
+  cursor: pointer;
+  overflow: hidden;
+  z-index: 0;
+  transition: color 0.4s ease;
+}
+.btn-cancel::before {
+  content:"";
+  position:absolute;
+  top:0; left:-100%;
+  width:100%; height:100%;
+  background: #e46565; 
+  z-index:-1;
+  transition: left 0.15s ease;
+}
+.btn-cancel:hover::before { left:0; }
+.btn-cancel:hover { color:#fff; }
+.btn-cancel:not(:hover)::before { left:-100%; }
+
+/* PRODUCT LIST */
+.products-container { display:flex; flex-direction:column; gap:15px; }
+.product-card { display:flex; align-items:center; gap:15px; }
+.product-card img { width:80px; height:80px; object-fit:cover; border-radius:8px; }
+.product-info { flex:1; }
+.product-info h4 { font-size:1rem; font-weight:600; margin-bottom:5px; }
+.product-info span { font-size:0.9rem; color:#555; }
+
+/* FOOTER */
+footer { background:#000; color:#fff; padding:50px 80px 30px; font-size:0.95rem; line-height:1.6; }
+.footer-container { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:40px; margin-bottom:30px; }
+.footer-section h3, .footer-section h4 { margin-bottom:15px; font-weight:700; }
+.footer-section p, .footer-section li, .footer-section a { color:#ddd; text-decoration:none; }
+.footer-section ul { list-style:none; padding:0; }
+.footer-section li { margin-bottom:8px; }
+.footer-section a:hover { color:#fff; }
+.footer-bottom { border-top:1px solid #444; padding-top:20px; text-align:center; color:#bbb; font-size:0.9rem; }
+
+@media(max-width:1100px){ main{grid-template-columns:1fr; padding:40px 30px; gap:30px;} }
