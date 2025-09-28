@@ -31,7 +31,7 @@
     <section>
         <div class="card">
             <h2 class="section-title">Billing & Payment</h2>
-            <form>
+            <form onsubmit="event.preventDefault(); window.location.href='detail.html';">
                 <div class="form-group">
                     <input type="text" id="name" required placeholder=" ">
                     <label for="name">Full Name</label>
@@ -72,9 +72,9 @@
                     <label for="payment">Payment Method</label>
                 </div>
                 <div class="actions" style="margin-top:20px;">
-                    <a href="detail.html">
-                    <button type="button" class="btn-place-order">Place Order</button>
-                    </a>
+                    <!-- <a href="detail.html"> -->
+                    <button type="submit" class="btn-place-order">Place Order</button>
+                    <!-- </a> -->
                     <button type="button" class="btn-cancel">Cancel Order</button>
                 </div>
             </form>
