@@ -1,0 +1,98 @@
+
+.site-footer {
+  margin-top: 2.5rem;  
+  background: #000;
+  color: #fff;
+  font-family: Arial, sans-serif;
+  padding: 2rem;
+  font-size: 14px;
+}
+
+ .footer-top {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #333;
+  padding-bottom: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+ .social-icons {
+  display: grid;
+  grid-template-columns: repeat(5, auto); /* 5 icon / hàng */
+  gap: 0.75rem 1.2rem; /* khoảng cách dọc & ngang */
+  justify-content: end; /* căn phải (giống bản gốc) */
+}
+
+ .footer-links ul {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  gap: 0.75rem 2rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+ .footer-links a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #fff;
+}
+
+ .footer-links a:hover {
+  color: #aaa;
+}
+
+ .footer-social {
+  text-align: right;
+}
+
+ .footer-social p {
+  margin-bottom: 0.5rem;
+  font-weight: bold;
+}
+
+ .social-icons a {
+  color: #fff;
+  margin-left: 0.5rem;
+  font-size: 18px;
+}
+
+ .footer-middle {
+  border-bottom: 1px solid #333;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+ .footer-bottom p {
+  margin: 0.3rem 0;
+}
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+     .container {
+        padding: 0 20px;
+    }
+
+     .input-search {
+        display: none;
+    }
+    main {
+        padding-top: 100px; /* bù chiều cao header trên mobile */
+    }
+}
+
+/* Tablet: 2 cột */
+@media (min-width: 768px) {
+   .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Desktop: 3 cột */
+@media (min-width: 1024px) {
+   .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

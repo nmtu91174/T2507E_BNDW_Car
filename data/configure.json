@@ -1,0 +1,22 @@
+{
+  "variants": [
+    {
+      "id": "temerario",
+      "title": "TEMERARIO",
+      "image": "/images/model_chooser_temerario.webp",
+      "info": "Combined energy consumption: 26,8 kWh/100 Km plus 11,2 l/100km; Combined CO2 emissions: 272 g/km; Combined CO2 efficiency class: G; CO2 class with discharged battery: G; Combined fuel consumption with discharged battery: 14 l/100km"
+    },
+    {
+      "id": "revuelto",
+      "title": "REVUELTO",
+      "image": "/images/model_chooser_revuelto.webp",
+      "info": "Combined energy consumption: 26,5 kWh/100 Km plus 15 l/100km; Combined CO2 emissions: 350 g/km; Combined CO2 efficiency class: G; CO2 class with discharged battery: G; Combined fuel consumption with discharged battery: 17,9 l/100km"
+    },
+    {
+      "id": "urus-se",
+      "title": "URUS SE",
+      "image": "/images/model_chooser_urus_se.webp",
+      "info": "Combined energy consumption: 39,5 kWh/100 Km plus 5,71 l/100km; Combined CO2 emissions: 140 g/km; Combined CO2 efficiency class: E; CO2 class with discharged battery: G; Combined fuel consumption with discharged battery: 12,9 l/100km"
+    }
+  ]
+}

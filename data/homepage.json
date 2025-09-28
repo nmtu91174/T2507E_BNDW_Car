@@ -1,0 +1,97 @@
+{
+  "models": [
+    {
+      "id": "huracan",
+      "family": "HURACÁN",
+      "wordmark": "/images/huracan/huracan_logo.svg",
+      "variants": [
+        {
+          "id": "sterrato",
+          "label": "STERRATO",
+          "heroImage": "/images/huracan/huracan_sterrato.webp",
+          "slogan": "BEYOND THE CONCRETE",
+          "info": "Huracán Sterrato: Combined energy consumption 14.9 l/100km; CO2 338 g/km"
+        },
+        {
+          "id": "tecnica",
+          "label": "HURACÁN TECNICA",
+          "heroImage": "/images/huracan/huracan_tecnica.webp",
+          "slogan": "TAKE ALL YOUR SOULS TO DRIVE",
+          "info": "Huracán Tecnica: Combined energy consumption 14.5 l/100km; CO2 328 g/km"
+        },
+        {
+          "id": "sto",
+          "label": "HURACÁN STO",
+          "heroImage": "/images/huracan/huracan_sto.webp",
+          "slogan": "BASED ON A TRUE STORY",
+          "info": "Huracán STO: Combined energy consumption 13.85 l/100km; CO2 331 g/km"
+        },
+        {
+          "id": "spyder",
+          "label": "HURACÁN EVO SPYDER",
+          "heroImage": "/images/huracan/huracan_evo_spyder.webp",
+          "slogan": "EVERY DAY AMPLIFIED",
+          "info": "Huracán Evo Spyder: Combined energy consumption 14.7 l/100km; CO2 335 g/km"
+        }
+      ]
+    },
+    {
+      "id": "temerario",
+      "family": "TEMERARIO",
+      "wordmark": "/images/temerario/temerario_logo.svg",
+      "variants": [
+        {
+          "id": "temerario-main",
+          "label": "TEMERARIO",
+          "heroImage": "/images/temerario/temerario_car.webp",
+          "slogan": "YOU CAN'T HIDE WHO YOU ARE",
+          "info": "Temerario: Combined energy consumption 26.8 kWh/100km + 11.2 l/100km; CO2 272 g/km",
+          "link": "product-detail.html",
+          "brochure": "brochures/temerario.pdf"
+        }
+      ]
+    },
+    {
+      "id": "urus",
+      "family": "URUS",
+      "wordmark": "/images/urus/urus_logo.svg",
+      "variants": [
+        {
+          "id": "urus-se",
+          "label": "URUS SE",
+          "heroImage": "/images/urus/urus_se.webp",
+          "slogan": "DARE T0 LIVE MORE",
+          "info": "Urus SE: Combined energy consumption 14.1 l/100km; CO2 320 g/km"
+        },
+        {
+          "id": "urus-s",
+          "label": "URUS S",
+          "heroImage": "/images/urus/urus_s.webp",
+          "slogan": "FOR BAR RAISERS ONLY",
+          "info": "Urus S: Combined energy consumption 15.7 l/100km; CO2 340 g/km"
+        },
+        {
+          "id": "urus-performante",
+          "label": "URUS PERFORMANTE",
+          "heroImage": "/images/urus/urus_performante.webp",
+          "slogan": "FOR BAR RAISERS ONLY",
+          "info": "Urus Performante: Combined energy consumption 15.0 l/100km; CO2 330 g/km"
+        }
+      ]
+    },
+    {
+      "id": "revuelto",
+      "family": "REVUELTO",
+      "wordmark": "/images/revuelto/revuelto_logo.svg",
+      "variants": [
+        {
+          "id": "revuelto-main",
+          "label": "REVUELTO",
+          "heroImage": "/images/revuelto/revuelto.webp",
+          "slogan": "FROM NOW ON",
+          "info": "Revuelto: Combined energy consumption 26.5 kWh/100km + 15 l/100km; CO2 350 g/km"
+        }
+      ]
+    }
+  ]
+}

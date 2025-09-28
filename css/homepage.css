@@ -1,0 +1,692 @@
+@font-face {
+  font-family: 'myFont';
+  src: url('../src/Lambotype-Variable.woff') format('woff');
+}
+
+
+body {
+    margin: 0;
+    font-family: 'myFont', sans-serif;
+    color: #fff;
+    background: #000;
+    overflow-x: hidden;
+}
+
+:root{
+  --container: 1230px; /* bề rộng container */
+  --car-w: 900px;     /* bề rộng ảnh xe chính */
+  --ghost-visible: 0.20; /* phần trăm ảnh ghost muốn lộ (10%) */
+  --ghost-opacity: 0.18; /* độ mờ ghost */
+}
+
+
+.hero {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* full màn hình */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+}
+
+/* Background video full */
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;   /* phủ ngang màn hình */
+    height: 100vh;  /* phủ dọc màn hình */
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* Overlay */
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: -1;
+}
+
+/* Container giới hạn chiều rộng */
+.container {
+    width: 100%;
+    max-width: var(--container);
+    margin: 0 auto;
+}
+
+.container.hero {
+  margin-bottom: -250px; /* chỉnh số px theo ý */
+}
+
+.hero-subtitle {
+    font-weight: 700;
+    font-size: 27px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.hero-title {
+    font-family: 'myFont', sans-serif;
+    font-size: 120px;
+    margin-top: -10px;
+    text-transform: uppercase;
+    font-variation-settings: "wdth" 0, "wght" 700;
+    font-weight: 1000;
+    margin-bottom: 40px;
+    line-height: 1;
+
+}
+
+/* Hero footer dính sát đáy video */
+.hero-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background-color: #181818;
+    display: flex;
+    align-items: center;
+}
+
+.hero-footer .container {
+    display: flex;
+    align-items: center;
+    height: 57.26px;
+}
+
+.hero-footer p {
+    margin: 0;
+    font-size: 16px;
+    color: #ccc;
+    line-height: 1.4;
+}
+
+.btn-hero {
+    display: flex;                 /* dùng flex để canh giữa */
+    justify-content: center;       /* canh giữa ngang */
+    align-items: center;           /* canh giữa dọc */
+    height: 72px;
+    width: 208px;
+    background: #FFD200; 
+}
+
+.btn {
+    color: #000;
+    font-weight: 700;
+    font-family: 'myFont', sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+/* hover đổi nền */
+.btn-hero:hover {
+    background: #e6b800;
+}
+
+
+/*Section 2*/
+
+/* SECTION MODELS */
+.models {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;         /* chiếm ít nhất 1 màn hình */
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 0;           /* khoảng cách trên dưới */
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.models .container {
+  position: relative;
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+/* wordmark */
+.model-wordmark img {
+  max-height: 55px;
+  margin-bottom: 20px;
+}
+
+/* slogan */
+.model-slogan {
+    text-transform: uppercase;
+    max-width: var(--container);
+    width:100%;
+    color: #333;
+    text-align: center;
+    color:#494949;
+    font-family: 'myFont', sans-serif;
+    font-size: 120px;
+    text-transform: uppercase;
+    font-weight: 1000;
+    font-variation-settings: "wdth" 0, "wght" 700;
+    margin: 0px 0px -30px;
+}
+
+
+/* hero car */
+.hero-car img {
+  max-width: var(--car-w);
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 20px auto;           /* căn giữa ảnh */
+}
+
+/* model name */
+.model-name-wrap {
+  margin: 20px 0;
+}
+
+.model-name {
+  font-size: 18px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.name-underline {
+  display: block;
+  width: 60px;
+  height: 2px;
+  background: #c9a634;
+  margin: 6px auto 0;
+}
+
+/* variant tabs */
+.model-name-wrap {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.model-name-row { 
+  margin: 20px 0;
+  text-align: center;
+}
+
+.model-stage {
+  position: relative;
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  overflow: hidden;            /* tránh ảnh tràn */
+}
+
+.variant-tabs {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  list-style: none;
+  padding: 0;
+  margin-top: 30px;
+}
+
+.variant-tabs li {
+  cursor: pointer;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #777;
+  border-bottom: 1px solid transparent;
+}
+
+.variant-tabs li.active {
+  color: #000;
+  border-color: #917300;
+  font-weight: 600;
+}
+
+
+/* tab active để dễ nhìn */
+#variantTabs li.active {
+  font-weight: 700;
+  color: #494949;
+  border-bottom: 2px solid #917300;
+}
+
+/* actions */
+.actions {
+  display: flex;
+  justify-content: center;  /* căn giữa ngang */
+  gap: 20px;
+  margin: 50px 0;
+}
+
+.btn-gold {
+  background: #917300;
+  color: #fff;
+  padding: 25px 24px;
+  text-decoration: none;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+.btn-white {
+  display: flex;             /* biến thành flex container */
+  align-items: center;       /* căn giữa theo chiều dọc */
+  justify-content: center;   /* căn giữa theo chiều ngang */
+  border: 1px solid #333;
+  color: #333;
+  padding: 12px 24px;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* info text */
+/* info text */
+.model-info {
+  margin-top: 20px;
+  font-size: 18px;
+  color: #666;
+  line-height: 1.4;
+  max-width: 1000px;
+  margin-left: auto;   /* căn giữa block */
+  margin-right: auto;  /* căn giữa block */
+  text-align: center;  /* căn giữa chữ */
+}
+
+/* header MODELS + DISCOVER ALL MODELS */
+.models-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between; /* chữ trái - link phải */
+  align-items: center;
+  margin-bottom:150px;
+  box-sizing: border-box;
+  margin-top:45px;
+}
+
+.models-label {
+  font-size: 40px;
+  margin: 0;
+  text-transform: uppercase;
+  color: #111;
+}
+
+.discover-link {
+  font-weight: 600;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #111;
+  position: relative;
+  white-space: nowrap;
+}
+
+.discover-link::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: #111;
+}
+
+.family-name {
+    display:none;
+}
+
+.model-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;      /* hoặc #fff nếu nền tối */
+  position: relative;
+  z-index: 2;       /* đảm bảo text nằm trên vạch */
+}
+
+.name-underline {
+  display: block;
+  width: 100%;
+  height: 3px;
+  background: #917300;
+  margin-top: 4px;
+  position: relative;
+  z-index: 1;       /* vạch nằm dưới chữ */
+}
+
+
+/* Nút điều hướng hình lục giác */
+/* Thanh chứa 2 nút bám đúng bề rộng container và nằm giữa khối xe */
+.nav-wrap {
+  position: absolute;
+  top: 35%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  width: 100%;                /* chiếm toàn màn hình */
+  max-width: var(--container); /* không vượt quá container */          /* thêm khoảng cách 2 bên */
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  z-index: 5;
+}
+
+.models .container {
+  position: relative; /* để nav-btn bám vào container */
+}
+
+.nav-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  width: 70px;   /* chỉnh theo kích thước png */
+  height: 70px;
+}
+
+.nav-icon {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+/* hover: nút sáng hơn + phóng nhẹ */
+.nav-btn:hover .nav-icon {
+  filter: brightness(0) saturate(100%) invert(29%) sepia(6%) saturate(229%) hue-rotate(9deg) brightness(93%) contrast(92%);
+}
+
+
+
+/* Ảnh mờ – căn cùng hàng với xe chính */
+.side-ghost{
+  position: absolute;
+  top: 58%;
+  transform: translateY(-50%);
+  opacity: var(--ghost-opacity);
+  width: var(--car-w);      /* cùng kích thước ảnh chính */
+  max-width: none;
+  pointer-events: none;
+  object-fit: contain;
+  z-index: 99;
+}
+
+/* Bên trái: chỉ lộ 10% phần đầu xe trong phạm vi container */
+.side-ghost.left{
+  left: calc(50% - var(--container)/2 - var(--car-w)*(1 - var(--ghost-visible)));
+  /* = mép trái container - 0.9 * bề rộng xe → chỉ còn 10% lọt vào */
+}
+
+/* Bên phải: chỉ lộ 10% phần đuôi xe trong phạm vi container */
+.side-ghost.right{
+  left: calc(50% + var(--container)/2 - var(--car-w)*var(--ghost-visible));
+  /* = mép phải container - 0.1 * bề rộng xe → chỉ 10% lọt vào */
+}
+
+
+
+.model-stage {
+  overflow: hidden;
+  width: 100%;
+  max-width: var(--container);
+  margin: 0 auto;
+  position: relative;
+}
+
+.model-track {
+  display: flex;
+  transition: transform 0.8s ease-in-out;
+  will-change: transform;
+}
+
+.model-content {
+  flex: 0 0 100%;  /* mỗi slide chiếm full khung */
+  box-sizing: border-box;
+  text-align: center;
+  padding: 20px 0;
+  z-index: 2;
+}
+
+/* === DEALER LOCATOR SECTION (simple layout) === */
+.dealer-locator {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background: url("../images/dealer.webp") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  color: #fff;
+}
+
+.dealer-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 1;
+}
+
+/* Container chuẩn theo section trên */
+.dealer-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: var(--container); /* 1230px */
+  margin: 0 auto;
+  text-align: left;
+}
+
+/* Tiêu đề */
+.dealer-title {
+  font-family: 'myFont', sans-serif;
+  font-size: 50px;
+  font-weight: 800;
+  text-transform: uppercase;
+  margin-bottom: 25px;
+  transform: scaleY(1.5);
+  margin-top: -5px;
+  margin-bottom: 50px;
+}
+
+/* Nút bấm */
+.dealer-btn {
+  display: inline-block;
+  background: #fff;
+  color: #000;
+  text-decoration: none;
+  padding: 20px 40px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.dealer-btn:hover {
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+
+/* === CONFIGURE TEMERARIO SECTION === */
+.configure-section {
+  position: relative;
+  width: 100%;
+  background: #181818;
+  color: #fff;
+  overflow: hidden;
+  padding: 88px 0 60px 0;
+}
+
+/* --- VARIANT TABS (canh giữa toàn trang) --- */
+.configure-section .variant-tabs {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+
+.configure-section .variant-tabs a {
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 17px;
+  text-transform: uppercase;
+  color: #aaa;
+  text-decoration: none;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.configure-section .variant-tabs a:hover {
+  color: #fff;
+}
+
+.configure-section .variant-tabs a.active {
+  color: #fff;
+  font-weight: 500;
+}
+
+.configure-section .variant-tabs a.active::after {
+  content: "";
+  position: absolute;
+  bottom: -20px;
+  left: -10px;
+  width: 120%;
+  height: 1px;
+  background: #f7c600;
+}
+
+/* --- Container giữ bố cục trái - phải --- */
+.configure-container {
+  position: relative;
+  width: 100%;
+  max-width: var(--container); /* 1230px */
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start; /* không dãn space-between */
+  gap: 30px;
+}
+
+/* --- Text bên trái --- */
+.configure-text {
+  flex: 0 0 35%; /* cố định độ rộng ~45% container */
+  text-align: left;
+  z-index: 2;
+  margin-top: -60px;
+}
+
+.configure-text h3 {
+  font-size: 25px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: #ccc;
+}
+
+.configure-text h1 {
+  font-family: 'myFont', sans-serif;
+  font-size: 120px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-top:-10px;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+
+  font-variation-settings: "wdth" 0, "wght" 700;
+}
+
+/* --- Buttons --- */
+.configure-buttons {
+  display: flex;
+  flex-wrap: nowrap;        /* không cho xuống dòng */
+  gap: 20px;                /* khoảng cách giữa hai nút */
+  align-items: center;      /* căn giữa theo chiều dọc */
+}
+
+.configure-buttons a {
+  white-space: nowrap;      /* giữ chữ trên cùng 1 dòng */
+}
+
+.btn-yellow {
+  background: #f7c600;
+  color: #000;
+  padding: 20px 35px;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.btn-yellow:hover {
+  background: #181818;
+  color: #ffffff;
+}
+
+.btn-outline {
+  background: transparent;
+  border: 1px solid #fff;
+  color: #fff;
+  padding: 20px 35px;
+  text-decoration: none;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 15px;
+  transition: all 0.3s ease;
+}
+
+.btn-outline:hover {
+  background: #fff;
+  color: #000;
+}
+
+/* --- Ảnh xe bên phải --- */
+.configure-image {
+  position: relative;
+  flex: 1;
+}
+
+.configure-image img {
+  width: 1500px; /* to hơn */
+  max-width: none;
+  height: auto;
+  position: relative;
+  right:500px; /* không tràn nhiều, sát hơn bên trái */
+}
+
+/* --- Dòng energy info (canh trái container) --- */
+.configure-section .container {
+  max-width: var(--container);
+  margin: 60px auto 0 auto;
+  text-align: left;
+  padding-left: 0; /* bỏ padding để text sát container */
+}
+
+
+.configure-info {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ffffff;
+  width: 100%; /* chiếm toàn container */
+  max-width: none; /* bỏ giới hạn 1000px */
+  margin-top:-40px;
+}
+
+.variant-tabs.bottom{
+  margin-top: -10px;
+}
+
+
+

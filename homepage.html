@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automobili Lamborghini</title>
+    <link rel="stylesheet" href="css/homepage.css">
+    <link rel="stylesheet" href="css/new1.css">
+    <link rel="stylesheet" href="footer.css">
+    
+</head>
+<body id="homepage">
+    <header id="news" class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <!-- Hamburger menu -->
+                <button class="btn-header">
+                    <span class="hamburger"></span>
+                    <span class="menu-header">Menu</span>
+                </button>
+
+                <!-- Logo -->
+                <div id="logo">
+                    <a href="#" class="a-header">
+                        <div class="logo-header">
+                            <img src="images/logos/logo_header_01.svg" alt="Lamborghini Logo">
+                        </div>
+                    </a>
+                </div>
+                
+
+                <!-- Search -->
+                <div class="right-header">
+                <a href="#"><img src="images/logos/searchArtboard 4.svg" width="40"/></a>
+                <a href="checkout.html"><i class="fas fa-shopping-cart"></i> Cart (3)</a>
+                </div>
+                <!-- <div class="search">
+                    <input type="text" class="input-search" placeholder="Search...">
+                    <button class="icon-button">
+                        <img src="/images/logos/search.svg" alt="Search Icon">
+                    </button>
+                </div> -->
+
+            </div>
+        </nav>
+    </header>
+
+    <main id="homepage">
+        <!-- HERO -->
+        <section class="hero">
+            <video autoplay muted loop playsinline class="hero-video">
+                <source src="videos/lambo-homepage.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="overlay"></div>
+            <div class="container hero">
+                <div class="hero-content">
+                    <p class="hero-subtitle">TEMERARIO</p>
+                    <h1 class="hero-title">FROM THE ALPS<br>TO THE SEA</h1>
+                </div>
+                <div class="btn-hero">
+                    <a href="#" class="btn">Discover More →</a>
+                </div>
+            </div>
+            <div class="hero-footer">
+                <div class="container">
+                    <p>
+                        Combined energy consumption: 26.8 kWh/100 km plus 11.2 l/100 km; 
+                        Combined CO2 emissions: 272 g/km; Combined CO2 efficiency class: G; 
+                        CO2 class with discharged battery: G; Combined fuel consumption with 
+                        discharged battery: 14 l/100 km
+                    </p>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- MODELS -->
+        <section id="models" class="models">
+            <!-- Ghost cars -->
+            <img id="sideLeft" class="side-ghost left" src="" alt="" aria-hidden="true" />
+            <img id="sideRight" class="side-ghost right" src="" alt="" aria-hidden="true" />
+
+            <div class="container model">
+
+                <!-- Header tách riêng, không bị ảnh hưởng animation -->
+                <div class="models-header">
+                    <h3 class="models-label">MODELS</h3>
+                    <a id="discoverAllLink" href="#" class="discover-link">DISCOVER ALL MODELS →</a>
+                </div>
+
+                <!-- Stage -->
+                <div id="modelStage" class="model-stage">
+                    <div class="model-track" id="modelTrack">
+                    <!-- JS sẽ append slide (.model-content) vào đây -->
+                    </div>
+                </div>
+
+                <!-- Info -->
+                <div id="modelInfo" class="model-info"></div>
+
+                <!-- Navigation -->
+                <div class="nav-wrap">
+                    <button class="nav-btn prev" aria-label="Previous model">
+                        <img src="images/button/backward.png" alt="Previous" class="nav-icon">
+                    </button>
+                    <button class="nav-btn next" aria-label="Next model">
+                        <img src="images/button/forward.png" alt="Next" class="nav-icon">
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- DEALER LOCATOR SECTION -->
+        <section class="dealer-locator">
+            <div class="dealer-overlay"></div>
+            <div class="dealer-container">
+                <h2 class="dealer-title">DEALER LOCATOR</h2>
+                <a href="#" class="dealer-btn">FIND YOUR DEALER →</a>
+            </div>
+        </section>
+
+        <!-- CONFIGURE TEMERARIO SECTION -->
+        <section class="configure-section">
+
+            <!-- Tabs hàng trên (nằm ngoài container) -->
+            <div class="variant-tabs bottom">
+                <a href="#" class="active">TEMERARIO</a>
+                <a href="#">REVUELTO</a>
+                <a href="#">URUS SE</a>
+            </div>
+
+            <!-- Container chữ + ảnh -->
+            <div class="configure-container">
+
+                <!-- Khối chữ và nút bên trái -->
+                <div class="configure-text">
+                    <h3>CONFIGURE YOUR</h3>
+                    <h1>TEMERARIO</h1>
+                    <div class="configure-buttons">
+                        <a href="#" class="btn-yellow">START CONFIGURATION</a>
+                        <a href="#" class="btn-outline">EXPLORE THE MODEL →</a>
+                    </div>
+                </div>
+
+                <!-- Ảnh xe bên phải -->
+                <div class="configure-image">
+                    <img src="images/model_chooser_temerario.webp" alt="Temerario">
+                </div>
+
+            </div>
+
+            <!-- Dòng energy info canh giữa -->
+            <div class="container">
+                <p class="configure-info">
+                    Combined energy consumption: 26,8 kWh/100km plus 11,2 l/100km; Combined CO2 emissions: 272 g/km;
+                    Combined CO2 efficiency class: G; CO2 class with discharged battery: G;
+                    Combined fuel consumption with discharged battery: 14 l/100km
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <section id="news">
+        <!-- Nội dung trang -->
+        <!-- first news -->
+        <section>
+                <div class="container-first-news">
+                    <div class="css-zytba9">
+                        <div class="news-section-title">
+                            <h6 class="news-section-title__secondary">News</h6>
+                            <h1 class="news-section-title__primary">Lamborghini world</h1>
+                        </div>
+                    </div>
+                    <div class="main-news">
+                        <div class="card-news">
+                            <div class="card-news__image-wrapper">
+                                <a href="/en-en/news/lamborghini-and-italian-sea-group-present-101ft-motoryacht">
+                                    <div class="card-news__image">
+                                        <span>
+                                            <img class="img-first-news" alt="Lamborghini and Italian Sea Group present 101FT motoryacht" src="https://www.lamborghini.com/sites/it-en/files/DAM/lamborghini/news/2025/09_23_sea/cover.jpg" loading="lazy" width="800" height="533">
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="css-1mqv4dq">
+                                <div class="tags">
+                                    <a class="lam-tag lam-tag--link css-h8f4ss" title="Brand Extension" href="/news?tags=brand-extension">Brand Extension</a>
+                                </div>
+                            </div>
+                            <div class="css-182r2ku">
+                                <div class="date small">
+                                    <span>
+                                        <time datetime="2025-09-24">24 September 2025</time>
+                                    </span>
+                                </div>
+                            </div>
+                            <h3 class="card-news__title">
+                                <a href="/en-en/news/lamborghini-and-italian-sea-group-present-101ft-motoryacht">Lamborghini and Italian Sea Group present 101FT motoryacht</a>
+                            </h3>
+                        </div>
+                        <div class="consumption-emissions-section">
+                            <span>
+                                <ul class="ce-families-list">
+                                    <li>Limited Series: : Fenomeno: Under approval, not available for sale</li>
+                                    <li>Temerario: Combined energy consumption: 26,8 kWh/100 Km plus 11,2 l/100km; Combined CO2 emissions: 272 g/km; Combined CO2 efficiency class: G; Combined fuel consumption with discharged battery: 14 l/100km; CO2 class with discharged battery: G</li>
+                                </ul>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+        </section>
+        <div class="container">
+            <div class="info-description">
+                <img class="car-news-img" src="images/news/01-coversito.webp" alt=""/>
+                <a href="#"><h2 class="h2idescrp">Lamborghini Esperienza Avventura: Zion National Park</h2></a>
+                <p>Combined energy consumption: 39,5 kWh/100 Km plus 5,71 l/100km; Combined CO2 emissions: 140 g/km; Combined CO2 efficiency class: E; CO2 class with discharged battery: G; Combined fuel consumption with discharged battery: 12,9 l/100km</p>
+                            
+            </div>
+            <div class="info-description">
+                <img src="images/news/02-cover.webp" alt=""/>
+                <a href="#"><h2 class="h2idescrp">Lamborghini Polo Storico: old but gold</h2></a>
+                <div>
+                    <p></p>
+                    
+                </div>
+            </div>
+            <div class="info-description">
+                <img src="images/news/03-news.webp" alt=""/>
+                <a href="#"><h2 class="h2idescrp">Temerario Immersive Experience</h2></a>
+                <p>Combined energy consumption: 26,8 kWh/100 Km plus 11,2 l/100km; Combined CO2 emissions: 272 g/km; Combined CO2 efficiency class: G; CO2 class with discharged battery: G; Combined fuel consumption with discharged battery: 14 l/100km</p>
+                
+            </div>
+            <div class="info-description">
+                <img class="car-news-img" src="images/news/04-cover_nuova.webp" alt=""/>
+                <a href="#"><h2 class="h2idescrp">The ultimate SEABOB for Automobili Lamborghini by CAYAGO</h2></a>
+                <p>Combined energy consumption: 39,5 kWh/100 Km plus 5,71 l/100km; Combined CO2 emissions: 140 g/km; Combined CO2 efficiency class: E; CO2 class with discharged battery: G; Combined fuel consumption with discharged battery: 12,9 l/100km</p>
+                            
+            </div>
+            <div class="info-description">
+                <img src="images/news/05-cover.webp" alt=""/>
+                <a href="#"><h2 class="h2idescrp">Lamborghini at Pebble Beach Concours d’Elegance</h2></a>
+                <div>
+                    <p>
+                        Limited Series: : Fenomeno: Under approval, not available for sale
+                        Revuelto: Combined energy consumption: 26,5 kWh/100 Km plus 15 l/100km; Combined CO2 emissions: 350 g/km; Combined CO2 efficiency class: G; Combined fuel consumption with discharged battery: 17,9 l/100km; CO2 class with discharged battery: G
+                        Temerario: Combined energy consumption: 26,8 kWh/100 Km plus 11,2 l/100km; Combined CO2 emissions: 272 g/km; Combined CO2 efficiency class: G; Combined fuel consumption with discharged battery: 14 l/100km; CO2 class with discharged battery: G
+                        Urus SE: Combined energy consumption: 39,5 kWh/100 Km plus 5,71 l/100km; Combined CO2 emissions: 140 g/km; Combined CO2 efficiency class: E; Combined fuel consumption with discharged battery: 12,9 l/100km; CO2 class with discharged battery: G
+                    </p>
+                    
+                </div>
+            </div>
+            <div class="info-description">
+                <img src="images/news/06-cover.webp" alt=""/>
+                <a href="#"><h2 class="h2idescrp">Automobili Lamborghini Unveils Fenomeno at The Quail</h2></a>
+                <p>
+                    Limited Series: : Fenomeno: Under approval, not available for sale
+                    Revuelto: Combined energy consumption: 26,5 kWh/100 Km plus 15 l/100km; Combined CO2 emissions: 350 g/km; Combined CO2 efficiency class: G; Combined fuel consumption with discharged battery: 17,9 l/100km; CO2 class with discharged battery: G
+                    Temerario: Combined energy consumption: 26,8 kWh/100 Km plus 11,2 l/100km; Combined CO2 emissions: 272 g/km; Combined CO2 efficiency class: G; Combined fuel consumption with discharged battery: 14 l/100km; CO2 class with discharged battery: G
+                </p>
+                
+            </div>
+            <div class="info-description">
+                <img class="car-news-img" src="images/news/07-cover_d.webp" alt=""/>
+                <a href="#"><h2 class="h2idescrp">Lamborghini Esperienza Avventura: Zion National Park</h2></a>
+                <p>Combined energy consumption: 39,5 kWh/100 Km plus 5,71 l/100km; Combined CO2 emissions: 140 g/km; Combined CO2 efficiency class: E; CO2 class with discharged battery: G; Combined fuel consumption with discharged battery: 12,9 l/100km</p>
+                            
+            </div>
+            <div class="info-description">
+                <img src="images/news/08-coversito.webp" alt=""/>
+                <a href="#"><h2 class="h2idescrp">Lamborghini Polo Storico: old but gold</h2></a>
+                <div>
+                    <p></p>
+                    
+                </div>
+            </div>
+            <div class="info-description">
+                <img src="images/news/09-coversito.webp" alt=""/>
+                <a href="#"><h2 class="h2idescrp">Temerario Immersive Experience</h2></a>
+                <p>Combined energy consumption: 26,8 kWh/100 Km plus 11,2 l/100km; Combined CO2 emissions: 272 g/km; Combined CO2 efficiency class: G; CO2 class with discharged battery: G; Combined fuel consumption with discharged battery: 14 l/100km</p>
+                
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript" src="js/homepage.js"></script>
+    <script src="js/configure.js"></script>
+
+</body>
+</html>
