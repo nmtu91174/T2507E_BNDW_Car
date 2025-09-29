@@ -431,7 +431,7 @@ body #news {
   font-weight: bold;
 }
 
-#news .social-icons a {
+.social-icons a {
   color: #fff;
   margin-left: 0.5rem;
   font-size: 18px;
