@@ -100,6 +100,15 @@ body #news {
     /* font-weight: 500; */
 }
 
+#news .menu-header a{
+    /* text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 500; */
+    text-decoration: none;
+    color: #fff;
+}
+
+
 /* Main content */
 #news main {
     margin: 0 auto;
