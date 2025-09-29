@@ -39,7 +39,7 @@ fetch(url)
           </ul>
         </div>
         <div class="actions">
-          <a href="${v.link || '#'}" class="btn-gold" target="_blank">EXPLORE THE MODEL →</a>
+          <a href="${v.link || 'product-detail.html'}" class="btn-gold" target="_blank">EXPLORE THE MODEL →</a>
           <a href="${v.brochure || '#'}" class="btn-white" target="_blank">DOWNLOAD BROCHURE ⬇</a>
         </div>
         <div class="model-info">${v.info}</div>
